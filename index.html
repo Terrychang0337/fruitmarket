@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daily Fruit Market</title>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans&display=swap" rel="stylesheet">
+    <!-- self CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onload="initial();">
+    <!-- 草地圖 -->
+    <div class="bg">
+    </div>
+    <div class="banner">
+        <h1>Welcome to Daily fruit market :)</h1>
+    </div>
+
+    <div class="productpage u-clearfix">
+
+
+        <!-- 我要購買page Start -->
+        <div id="purchasepage" class="buypage">
+            <div class="buypage_top u-clearfix">
+                <a href="#!" class="buypage_closebtn">
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="buypage_title">
+                <h3>我要購買</h3>
+            </div>
+            <div class="buypage_num u-clearfix">
+                <div class="buypage_num_title1">
+                    <button id="min" name="" style="float:right" class="btn" onclick="javascript:buymin()">-</button>
+                </div>
+                <div class="buypage_num_title2">
+                    <p id="buyamount_show"></p>
+                </div>
+                <div class="buypage_num_title3">
+                    <p>箱</p>
+                </div>
+                <div class="buypage_num_title4">
+                    <button id="add" name="" class="btn" onclick="javascript:buyadd()">+</button>
+                </div>
+            </div>
+            <div class="buypage_btn">
+                <button id="tobuy" name="" class="btn" onclick="javascript:tobuy()">確定</button>
+            </div>
+        </div>
+        <!-- 我要購買page End -->
+
+
+        <!-- 我要預購page Start-->
+        <div id="prebuypage" class="buypage">
+            <div class="buypage_top u-clearfix">
+                <a href="#!" class="buypage_closebtn">
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="buypage_title">
+                <h3>我要預購</h3>
+            </div>
+
+            <div class="buypage_num">
+                <div class="buypage_num_title1">
+                    <button id="min" name="" style="float:right" class="btn" onclick="javascript:prebuymin()">-</button>
+                </div>
+                <div class="buypage_num_title2">
+                    <p id="prebuyamount_show"></p>
+                </div>
+                <div class="buypage_num_title3">
+                    <P>箱</P>
+                </div>
+                <div class="buypage_num_title4">
+                    <button id="add" name="" class="btn" onclick="javascript:prebuyadd()">+</button>
+                </div>
+            </div>
+            <div class="buypage_btn">
+                <button id="toprebuy" name="" class="btn" onclick="javascript:toprebuy()">確定</button>
+            </div>
+        </div>
+        <!-- 我要預購page End-->
+
+        <!-- 產品頁左欄部分 Start -->
+        <div class="productpage_productpic">
+            <img src="images/fruit.jpg" alt="" class="productpic">
+        </div>
+        <!-- 產品頁左欄部分 End -->
+
+        <!-- 產品頁右欄部分 Start -->
+        <div class="info productpage_info">
+            <div class="info_prebuy">
+                <div id="prebuy_1" class="info_prebuy_title1">
+                    <h3>預購數量:</h3>
+                </div>
+                <div id="prebuy_2" class="info_prebuy_title2">
+                    <p id="preamount_show"></p>
+                </div>
+            </div>
+            <div class="info_time u-clearfix">
+                <div class="info_time_title1">
+                    <h3>倒數時間:</h3>
+                </div>
+                <div class="info_time_title2" id="countdown">
+                </div>
+                <div class="info_time_title3">
+                    <h3>秒</h3>
+                </div>
+            </div>
+
+            <div class="info_name">
+                <h3>紅心火龍果</h3>
+            </div>
+
+            <div class="info_amount u-clearfix">
+                <div class="info_amount_title1">
+                    <h3>剩餘數量:</h3>
+                </div>
+                <div class="info_amount_title2">
+                    <p id="amount_show"></p>
+                </div>
+
+            </div>
+
+            <div class="info_button">
+                <button id="buy_btn" class="btn" onclick="window.location.href='#purchasepage'">購買</button>
+                <button id="prebuy_btn" class="btn" onclick="window.location.href='#prebuypage'">預購</button>
+                <button id="nosell_btn" class="btn_nosell">停售</button>
+            </div>
+        </div>
+        <!-- 產品頁右欄部分 End -->
+
+    </div>
+
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js " integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
+    <!-- self js -->
+    <script src="js/custom.js "></script>
+</body>
+
+</html>
